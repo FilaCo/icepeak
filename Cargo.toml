@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+anyhow = { version = "1" }
+clap = { version = "4", features = ["derive"] }
+iced = { version = "0.14" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "fs"] }
+tracing = { version = "0.1" }
+tracing-appender = { version = "0.2" }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
