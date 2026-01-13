@@ -13,6 +13,7 @@ impl Cli {
         }
 
         iced::daemon(App::new, App::update, App::view)
+            .title(App::title)
             .run()
             .expect("unable to run icypeak");
     }

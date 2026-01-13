@@ -1,12 +1,20 @@
-use iced::Task;
+use iced::{Task, window};
 
-use crate::app::Message;
+use crate::app::{Message, screen::Screen};
 
 #[derive(Debug)]
-pub struct App {}
+pub struct App {
+    pub screen: Screen,
+}
 
 impl App {
     pub fn new() -> (Self, Task<Message>) {
-        (Self {}, Task::none())
+        let (_, open) = window::open(window::Settings::default());
+        (
+            Self {
+                screen: Screen::Loading,
+            },
+            Task::batch(vec![open.map(Message::WindowOpened)]),
+        )
     }
 }

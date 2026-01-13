@@ -11,7 +11,7 @@ clap = { version = "4", features = ["derive"] }
 ctrlc = { version = "3" }
 daemonize = { version = "0.5" }
 directories = { version = "6" }
-iced = { version = "0.14", features = ["tokio"] }
+iced = { version = "0.14" }
 iced_aw = { version = "0.13" }
 inotify = { version = "0.11" }
 serde = { version = "1" }

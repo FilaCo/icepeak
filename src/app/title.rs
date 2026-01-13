@@ -1,9 +1,12 @@
 use iced::window;
 
-use crate::app::App;
+use crate::app::{App, screen::Screen};
 
 impl App {
     pub fn title(&self, _: window::Id) -> String {
-        String::from("IcyPeak")
+        match &self.screen {
+            Screen::Loading => String::from("IcyPeak"),
+            Screen::Home(home) => home.title(),
+        }
     }
 }
