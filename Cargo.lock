@@ -1657,7 +1657,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "icypeak"
+name = "icepeak"
 version = "0.1.0"
 dependencies = [
  "clap",

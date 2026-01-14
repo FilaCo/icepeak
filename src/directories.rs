@@ -14,7 +14,7 @@ pub fn logs() -> &'static Path {
 }
 
 fn project_dirs() -> ProjectDirs {
-    ProjectDirs::from("dev", "FilaCo", "icypeak").expect("unable to retrieve project dirs")
+    ProjectDirs::from("dev", "FilaCo", "icepeak").expect("unable to retrieve project dirs")
 }
 
 static PROJECT_DIRS: LazyLock<ProjectDirs> = LazyLock::new(project_dirs);

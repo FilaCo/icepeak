@@ -4,6 +4,6 @@ use crate::app::screen::home::{Home, Message};
 
 impl Home {
     pub fn title(&self) -> String {
-        String::from("IcyPeak - Home")
+        String::from("IcePeak - Home")
     }
 }

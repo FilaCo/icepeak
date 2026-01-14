@@ -6,15 +6,15 @@ use crate::{app::App, cli::Cli};
 impl Cli {
     pub async fn handle(self) {
         if self.detach {
-            info!("detach icypeak from the current terminal");
+            info!("detach icepeak from the current terminal");
             Daemonize::new()
                 .start()
-                .expect("unable to detach icypeak from the current terminal");
+                .expect("unable to detach icepeak from the current terminal");
         }
 
         iced::daemon(App::new, App::update, App::view)
             .title(App::title)
             .run()
-            .expect("unable to run icypeak");
+            .expect("unable to run icepeak");
     }
 }
